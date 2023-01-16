@@ -1,1 +1,13 @@
 테스팅
+
+Dart 변수
+String, int ... : class의 property 사용시 권장. ( 명시적으로 타입에 맞게 작성. )
+var : 함수내 로컬 영역에서는 var을 권장. ( 자동으로 타입에 맞게 셋팅. )
+final : 선언 후 수정되지 않는 내용. ( 컴파일 후에 입력 값으로 셋팅 될 수 있는 내용 선언. Ex. username, password ... )
+const : 선언 후 수정되지 않는 내용. ( 컴파일 전에 알고 있는 값 셋팅. Ex. Api Key, Encrypt Code ... )
+dynamic : 어떤 데이터가 들어오는지 알수없을때 작성. ( 변수 is Sting, 변수 is int 같이 IF 문으로 구분 처리 해야 타입에 맞는 내용 작성 가능. )
+late : 변수를 값 셋팅하지 않고 미리 선언하도록 함. late를 사용하지 않을 경우 null이 와도 에러가 발생하지 않아 null 체크를 해야 할 경우 late 사용하여 처리.
+      - late 사용시 Null 이 들어올 경우 Exeption 발생. Null이 오면 안되는 경우 late 사용하여 Exception 처리.
+      - late String _temperature; -> _temperature에 null이 올 경우 Exception 발생.
+      - String? _temperature; -> _temperature에 null이 와도 오류가 발생하지 않음.
+      
